@@ -15,7 +15,8 @@
         android:layout_height="?attr/actionBarSize"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:navigationIcon="d"/>
+        app:navigationIcon="@drawable/back_button"
+        android:paddingTop="8dp" />
 
     <TextView
         android:id="@+id/bookTitleAdmin"

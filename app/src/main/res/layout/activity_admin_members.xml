@@ -2,24 +2,24 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/userRequests"
+    android:id="@+id/adminMembers"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserRequestActivity">
+    android:orientation="vertical">
 
-    <!-- Scroll view for the requests -->
+    <!-- Scroll view for the members -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/requestsView"
+        android:id="@+id/adminMembersView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/bottomNavigationRequests"        android:layout_marginBottom="9dp"
+        android:layout_above="@+id/bottomNavAdmin"
+        android:layout_marginBottom="9dp"
         android:clipToPadding="false"
-        android:padding="20dp"
-        tools:listitem="@layout/request_items"/>
+        android:padding="20dp" />
 
     <!-- Bottom Nav -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationRequests"
+        android:id="@+id/bottomNavAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -30,6 +30,15 @@
         app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottom_menu" />
 
-
+    <!-- Add button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="100dp"
+        android:src="@android:drawable/ic_input_add" />
 
 </RelativeLayout>

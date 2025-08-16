@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/settings"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SettingsActivity">
+    android:padding="20dp">
 
     <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/settingBar"
+        android:id="@+id/memberBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:navigationIcon="@drawable/back_button"
-        android:padding="10dp" />
-<!--    maybe button should be a bit more lower?-->
+        android:paddingTop="8dp" />
 
+    <!-- Scrollview in case -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-            <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height= "wrap_content"
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/settingHeader"
                 android:layout_width="match_parent"
@@ -71,38 +78,16 @@
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background" />
 
-            <!-- Header -->
-            <TextView
-                android:id="@+id/settingHeader2"
+            <Button
+                android:id="@+id/confirmButtonAdmin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Preference"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:padding="16dp"/>
-
-            <!-- Notification Preference -->
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/pushNotif"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Push Notifications       "
-                android:textSize="25dp"
-                android:padding="16dp"/>
-            <!-- find a better method to put space between text and switch -->
-
-
-            <!-- Confirm Changes Button -->
-            <Button
-                android:id="@+id/confirmButton"
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:layout_marginTop="30dp"
-                android:layout_gravity="center_horizontal"
                 android:text="Confirm"
-                android:textSize="18sp"
-                app:cornerRadius="20dp" />
+                android:backgroundTint="@color/brown"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
