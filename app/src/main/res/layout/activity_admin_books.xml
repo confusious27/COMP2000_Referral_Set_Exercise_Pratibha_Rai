@@ -5,7 +5,8 @@
     android:id="@+id/adminBooks"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".CatalogueActivity">
 
     <!-- Scroll view for the books -->
     <androidx.recyclerview.widget.RecyclerView

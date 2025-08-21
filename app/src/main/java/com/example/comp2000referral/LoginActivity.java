@@ -32,8 +32,19 @@ public class LoginActivity extends AppCompatActivity {
 
         // login button
         loginButton.setOnClickListener(v -> { //for 30% check, no API
+            // user
             if (email.getText().toString().equals("user") && password.getText().toString().equals("1234")) {
                 Toast.makeText(LoginActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
+
+                // Go to next screen (replace NextActivity.class with your actual class)
+                Intent intent = new Intent(LoginActivity.this, UserBookActivity.class); // or MainActivity, DashboardActivity, etc.
+                startActivity(intent);
+                finish();
+            } else if (email.getText().toString().equals("admin") && password.getText().toString().equals("admin")) {
+                Toast.makeText(LoginActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(LoginActivity.this, CatalogueActivity.class);
+                startActivity(intent);
+                finish();
             } else {
                 Toast.makeText(LoginActivity.this, "Login Failed!", Toast.LENGTH_SHORT).show();
             }
